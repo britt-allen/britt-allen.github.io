@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, Response, render_template, request, send_file
 import bs4
 from bs4 import BeautifulSoup as bs
 import pandas as pd
@@ -63,10 +63,14 @@ def ecfr_process():
                             regex = "\[+|\]+|<[A-Z]+>+|<\/[A-Z]+>+|\\n+"
                             df.section_text = df.section_text.str.replace(regex, '')
 
-                            return df.to_csv('~/downloads/ecfr_download', index=False)
+                            csv = df.to_csv('~/downloads/ecfr_download', index=False)
+
+                            return csv
 
     # return send_file('app.py')
-    return render_template('ecfr_parser.html', data=parsing())
+    # return render_template('ecfr_parser.html', data=parsing()) 
+    return Response(parsing(), mimetype="text/csv", headers={"Content-disposition":
+    "attachment; filename=ecfr_download.csv"})
 
 
 if __name__ == "__main__":
