@@ -55,7 +55,7 @@ def ecfr_parser():
 
         output = df_bs.to_csv('/downloads', index=False)
 
-    return render_template('ecfr_parser.html', data=output)
+    return send_file('ecfr_parser.html', data=output)
     # return output
 
 if __name__ == "__main__":
