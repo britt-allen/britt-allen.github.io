@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+# app = Flask(__name__)
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+app = Flask(__name__, template_folder=dir_path)
 
 @app.route('/ecfr_parser', methods=['GET'])
 def ecfr_parser():
