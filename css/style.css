@@ -416,10 +416,9 @@ main {
     opacity: 0;
 }
 
-
-/* .portfolio-list li a img {
+.portfolio-list li a img {
     max-width: 100%;
-} */
+}
 
 .portfolio-list li a .text {
     position: absolute;
