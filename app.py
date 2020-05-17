@@ -56,3 +56,7 @@ def index():
         df_bs.to_csv('/downloads', index=False)
 
     return render_template('ecfr_parser.html')
+
+    def my_form_post():
+        # variable = request.form['submit']
+        return df_bs.to_csv('/downloads', index=False)
