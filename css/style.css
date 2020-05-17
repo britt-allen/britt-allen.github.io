@@ -252,6 +252,7 @@ body.offcanvas-open .site-wrap {
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: 25px;
+    font-weight: bold;
     top: 18px;
     color: #000;
 }
