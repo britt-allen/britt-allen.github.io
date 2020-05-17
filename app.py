@@ -1,9 +1,10 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/button', methods=['POST', 'GET'])
-def index():
+@app.route('/ecfr_parser', methods=['POST', 'GET'])
+
+def ecfr_parser():
     if request.method == "GET":
         from bs4 import BeautifulSoup as bs
         import pandas as pd
@@ -54,10 +55,7 @@ def index():
 
         output = df_bs.to_csv('/downloads', index=False)
 
-        return render_template('ecfr_parser.html', data=output)
+    return render_template('ecfr_parser.html', data=output)
 
-    # , Response(
-    #    output,
-    #    mimetype="text/csv",
-    #    headers={"Content-disposition":
-    #    f"attachment; filename=ecfr_title{num}.csv"})
+if __name__ == "__main__":
+    app.run(debug=True)
