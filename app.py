@@ -55,4 +55,8 @@ def index():
 
         output = df_bs.to_csv('/downloads', index=False)
 
-    return render_template('ecfr_parser.html', data=output)
+    return render_template('ecfr_parser.html'), Response(
+       output,
+       mimetype="text/csv",
+       headers={"Content-disposition":
+       f"attachment; filename=ecfr_title{num}.csv"})
