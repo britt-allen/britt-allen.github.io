@@ -1,4 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_file
+import bs4
+from bs4 import BeautifulSoup as bs
+import pandas as pd
+import requests
+import cgi
 
 # app = Flask(__name__)
 import os 
@@ -12,56 +17,56 @@ def ecfr_parser():
 @app.route('/ecfr_process', methods=['POST'])
 def ecfr_process():
     if request.method == "POST":
-        from bs4 import BeautifulSoup as bs
-        import pandas as pd
-        import requests
-        import cgi
-        form = cgi.FieldStorage()
-        num =  form.getvalue('ecfr_number')
-
-        xml_bs = requests.get(f'https://www.govinfo.gov/bulkdata/ECFR/title-{num}/ECFR-title{num}.xml')
-        soup = bs(xml_bs.content, 'xml')
-
-        list_of_dicts_bs = []
         
-        chapters_bs = soup.find_all('DIV3')
-        for chapter_bs in chapters_bs:
-            chapter_num_bs = chapter_bs.attrs['N']
-            chapter_title_bs = chapter_bs.find('HEAD').text
+        def parsing():
+            form = cgi.FieldStorage()
+            num =  form.getvalue('ecfr_number')
 
-            subchapters_bs = chapter_bs.find_all('DIV4')
-            for subchapter_bs in subchapters_bs:
-                subchapter_num_bs = subchapter_bs.attrs['N']
-                subchapter_title_bs = subchapter_bs.find('HEAD').text
+            url = f'https://www.govinfo.gov/bulkdata/ECFR/title-{num}/ECFR-title{num}.xml'
+            xml = requests.get(url)
+            soup = bs(xml.content, 'lxml')
 
-                parts_bs = subchapter_bs.find_all('DIV5')
-                for part_bs in parts_bs:
-                    part_num_bs = part_bs.attrs['N']
-                    part_title_bs = part_bs.find('HEAD').text
+            list_of_dicts = []
+            
+            chapters = soup.find_all('DIV3')
+            for chapter in chapters:
+                chapter_num = chapter.attrs['N']
+                chapter_title = chapter.find('HEAD').text
 
-                    sections_bs = part_bs.find_all('DIV8')
-                    for section_bs in sections_bs:
-                        section_num_bs = section_bs.attrs['N'][2:]
-                        section_title_bs = section_bs.find('HEAD').text
-                        section_text_bs = section_bs.find_all('P')
+                subchapters = chapter.find_all('DIV4')
+                for subchapter in subchapters:
+                    subchapter_num = subchapter.attrs['N']
+                    subchapter_title = subchapter.find('HEAD').text
 
-                        list_of_dicts_bs.append({'chapter': chapter_num_bs, 'chapter_title': chapter_title_bs,
-                                                    'subchapter': subchapter_num_bs, 'subchapter_title': subchapter_title_bs, 
-                                                    'part': part_num_bs, 'part_title': part_title_bs, 'section': section_num_bs, 
-                                                    'section_title': section_title_bs, 'section_text': str(section_text_bs)})
+                    parts = subchapter.find_all('DIV5')
+                    for part in parts:
+                        part_num = part.attrs['N']
+                        part_title = part.find('HEAD').text
 
-        df_bs = pd.DataFrame(data=list_of_dicts_bs, columns=['chapter', 'chapter_title', 'subchapter', 
-            'subchapter_title', 'part', 'part_title', 'section', 'section_title', 'section_text'])
+                        sections = part.find_all('DIV8')
+                        for section in sections:
+                            section_num = section.attrs['N'][2:]
+                            section_title = section.find('HEAD').text
+                            section_text = section.find_all('P')
 
-        for col in df_bs.columns:
-            df_bs[col] = df_bs[col].str.strip()
+                            list_of_dicts.append({'chapter': chapter_num, 'chapter_title': chapter_title,
+                                                    'subchapter': subchapter_num, 'subchapter_title': subchapter_title, 
+                                                    'part': part_num, 'part_title': part_title, 'section': section_num, 
+                                                    'section_title': section_title, 'section_text': str(section_text)})
 
-        regex_bs = "\[+|\]+|<[A-Z]+>+|<\/[A-Z]+>+|\\n+"
-        df_bs.section_text = df_bs.section_text.str.replace(regex_bs, '')
+                            df = pd.DataFrame(data=list_of_dicts, columns=['chapter', 'chapter_title', 'subchapter', 
+                            'subchapter_title', 'part', 'part_title', 'section', 'section_title', 'section_text'])
 
-        output = df_bs.to_csv('/downloads', index=False)
+                            for col in df.columns:
+                                df[col] = df[col].str.strip()
 
-    return send_file()
+                            regex = "\[+|\]+|<[A-Z]+>+|<\/[A-Z]+>+|\\n+"
+                            df.section_text = df.section_text.str.replace(regex, '')
+
+                            return df.to_csv('~/downloads/ecfr_download', index=False)
+
+    # return send_file('app.py')
+    return render_template('ecfr_parser.html', data=parsing())
 
 
 if __name__ == "__main__":
