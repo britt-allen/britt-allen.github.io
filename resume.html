@@ -29,73 +29,100 @@
         <div class="offcanvas_menu" id="offcanvas_menu">
             <ul class="mb-5">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio">Portfolio</a></li>
+                <li class="active"><a href="resume">Resume</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+            <ul class="social">
                 <li>
-                    <a href="portfolio" ">Portfolio</a></li>
-            <li class="active "><a href="resume ">Resume</a></li>
-            <li><a href="contact ">Contact</a></li>
-          </ul>
-          <ul class="social ">
-            <li>
-              <a href="https://github.com/traintestbritt " class="fa fa-github "></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/traintestbritt " class="fa fa-linkedin "></a>
-            </li>
-            <li>
-              <a href="https://medium.com/@traintestbritt " class="fa fa-medium "></a>
-            </li>
-          </ul>
-      
-      </br>
+                    <a href="https://github.com/traintestbritt " class="fa fa-github "></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/traintestbritt " class="fa fa-linkedin "></a>
+                </li>
+                <li>
+                    <a href="https://medium.com/@traintestbritt " class="fa fa-medium "></a>
+                </li>
+            </ul>
+
+            </br>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
             <script>
                 document.write(new Date().getFullYear());
-            </script> All rights reserved | This template is made with <i class="fa fa-heart-o " aria-hidden="true "></i> by <a href="https://colorlib.com " target="_blank ">Colorlib</a>
+            </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
         </div>
 
-        <aside style="background-image: url(media/britt.jpg); "></aside>
+        <aside style="background-image: url(media/AC19BFCA-7822-4178-A72B-28987FC344E2.jpg);"></aside>
         <main>
-            <a href="index.html " class="home-button "><span class="fa fa-home "></span></a>
-            <h1 class="mb-5 ">Experience</h1>
-            <div class="mb-5 ">
-                <iframe src="/media/Brittany_Allen_Resume_052020.pdf " width="500px " height="700px ">
-
-                <!-- <ul class="resume-list ">
+            <a href="index.html" class="home-button"><span class="fa fa-home"></span></a>
+            <h1 class="mb-5">Experience</h1>
+            <div class="mb-5">
+                <ul class="resume-list">
                     <li>
-                        <h3>Data Engineer (covid-19 layoff), Compaas</h3>
-                        <p class="date ">2020</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum dolore culpa libero delectus excepturi! Repellat dolore, sapiente officia quod.</p>
+                        <h3>Data Engineer (covid-19 layoff) @ Compaas • San Francisco</h3>
+                        <p class="date">2020</p>
+                        <p>
+                            <li>Wrote a script to generate data for a custom seed company which allowed our sales team to demo our product with consistent and realistic data</li>
+                            <li>Captured additional client data by adding new fields to existing data models via Django’s ORM</li>
+                            <li>Wrote scripts to flag duplicates and block updates on production until reconciled while retaining existing data and future-proofing us from client’s being able to duplicate pay raises with our software</li>
+                        </p>
                     </li>
                     <li>
-                        <h3>User Experience Director, Facebook</h3>
-                        <p class="date ">2019 2016 2017</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum dolore culpa libero delectus excepturi! Repellat dolore, sapiente officia quod.</p>
+                        <h3>Data & Analytics Strategist @ Palantir Technologies • NYC</h3>
+                        <p class="date">2019</p>
+                        <p>
+                            <li>Developed data pipelines leveraging Spark’s distributed computing framework to clean, transform, and integrate geospatial aircraft (ads-b) data collected via the OpenSky REST API with open-source aircraft, runway, and airport
+                                data enabling our client in the U.S. DOT to perform safety analyses at scale</li>
+                            <li>Defined a dynamic ontology modeled off of two mission-critical problems – aircraft misalignments and go-arounds – which reflected how safety analysts and aerospace engineers thought about their world</li>
+                            <li><a href="https://colab.research.google.com/drive/1pV9fcs8yGU-jKDXVcUwZaSznEeDBGYHB">Parsed XML files</a> to extract text from federal documents and stored it as a PySpark SQL DataFrame</li>
+                            <li>Led in-person client demos and created training materials on <a href="https://www.palantir.com/palantir-foundry/">Palantir Foundry</a></li>
+                        </p>
                     </li>
-
                     <li>
+                        <h3>Associate Data Science Instructor (contract) @ General Assembly • NYC</h3>
+                        <p class="date">2019</p>
+                        <p>
+                            <li>Co-taught a 12-week course for 30 Morgan Stanley employees, developed <a href="https://tinyletter.com/ga-ms-ds/letters/ga-x-ms-data-science-weekly-issue-02">supplemental course material</a> to reinforce learning, and hosted
+                                virtual and in-person 1:1 office hours to support students</li>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Data Science Scholar @ General Assembly • NYC</h3>
+                        <p class="date">2018</p>
+                        <p>
+                            <li>Awarded a full scholarship into an intensive program with coursework on regression analysis, hypothesis testing, bias-variance tradeoff, classification modeling, clustering analysis, etc.</li>
+                        </p>
+                    </li>
+                    <!-- <li>
                         <h3>Mobile Application Designer, Yahoo</h3>
-                        <p class="date ">Nov 2015 - Jan 2016</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum dolore culpa libero delectus excepturi! Repellat dolore, sapiente officia quod.</p>
+                        <p class="date">Nov 2015 - Jan 2016</p>
+                        <p>
+                          <li></li>
+                        </p>
                     </li>
                     <li>
                         <h3>Product Designer, Medium</h3>
-                        <p class="date ">Feb 2013 - Nov 2015</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum dolore culpa libero delectus excepturi! Repellat dolore, sapiente officia quod.</p>
-                    </li>
-                </ul> -->
+                        <p class="date">Feb 2013 - Nov 2015</p>
+                        <p>
+                          <li></li>
+                        </p>
+                    </li> -->
+                </ul>
             </div>
 
 
-            <h1 class="mb-5 ">Education</h1>
-            <div class="mb-5 ">
-                <ul class="resume-list ">
+            <h1 class="mb-5">Education</h1>
+            <div class="mb-5">
+                <ul class="resume-list">
                     <li>
-                        <h3>Harvard University</h3>
-                        <p class="date ">2010 - 2014</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum dolore culpa libero delectus excepturi! Repellat dolore, sapiente officia quod.</p>
+                        <h3>Rutgers Business School</h3>
+                        <p class="date">2016</p>
+                        <p>
+                            <li>Bachelor of Science, Marketing</li>
+                        </p>
                     </li>
 
                 </ul>
@@ -105,16 +132,15 @@
     </div>
 
     <!-- loader -->
-    <div id="loader " class="show fullscreen "><svg class="circular " width="48px " height="48px "><circle class="path-bg " cx="24 " cy="24 " r="22 " fill="none " stroke-width="4 " stroke="#eeeeee "/><circle class="path " cx="24 " cy="24 " r="22
-                        " fill="none " stroke-width="4 " stroke-miterlimit="10 " stroke="#f4b214 "/></svg></div>
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
-    <script src="js/jquery-3.2.1.min.js "></script>
-    <script src="js/popper.min.js "></script>
-    <script src="js/bootstrap.min.js "></script>
-    <script src="js/owl.carousel.min.js "></script>
-    <script src="js/jquery.waypoints.min.js "></script>
-    <script src="js/jquery.countdown.min.js "></script>
-    <script src="js/main.js "></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
