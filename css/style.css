@@ -408,7 +408,7 @@ main {
     left: 0;
     bottom: 0;
     right: 0;
-    background: #F73859;
+    /* background: #F73859; */
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
