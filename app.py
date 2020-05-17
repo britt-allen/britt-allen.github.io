@@ -68,8 +68,7 @@ def ecfr_process():
                             return csv
 
     # return send_file('app.py')
-    # return render_template('ecfr_parser.html', data=parsing()) 
-    return Response(parsing(), mimetype="text/csv", headers={"Content-disposition":
+    return render_template('ecfr_parser.html'), Response(parsing(), mimetype="text/csv", headers={"Content-disposition":
     "attachment; filename=ecfr_download.csv"})
 
 
