@@ -390,10 +390,11 @@ main {
     transition: .3s all ease;
 }
 
-.portfolio-list li:hover {
+
+/* .portfolio-list li:hover {
     -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-}
+} */
 
 .portfolio-list li a {
     display: block;
