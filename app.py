@@ -15,7 +15,7 @@ def index():
 
         def ecfr_parser():
         
-            xml_bs = requests.get(f'https://www.govinfo.gov/bulkdata/ECFR/title-{num}/ECFR-title{numnum}.xml')
+            xml_bs = requests.get(f'https://www.govinfo.gov/bulkdata/ECFR/title-{num}/ECFR-title{num}.xml')
             soup = bs(xml_bs.content, 'xml')
 
             list_of_dicts_bs = []
