@@ -378,17 +378,18 @@ main {
     margin: 0;
 }
 
-.portfolio-list li {
+
+/* .portfolio-list li {
     padding: 0;
     margin: 0 0 20px 0;
     display: block;
-    /* list-style: none; */
+    list-style: none;
     padding: 10px;
     border: 1px solid #e6e6e6;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-}
+} */
 
 
 /* .portfolio-list li:hover {
@@ -420,7 +421,8 @@ main {
     max-width: 100%;
 }
 
-.portfolio-list li a .text {
+
+/* .portfolio-list li a .text {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -434,7 +436,7 @@ main {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-}
+} */
 
 .portfolio-list li a .text h3 {
     color: #fff;
