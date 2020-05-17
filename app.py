@@ -53,6 +53,6 @@ def index():
         regex_bs = "\[+|\]+|<[A-Z]+>+|<\/[A-Z]+>+|\\n+"
         df_bs.section_text = df_bs.section_text.str.replace(regex_bs, '')
 
-        df_bs.to_csv('/downloads', index=False)
+        output = df_bs.to_csv('/downloads', index=False)
 
-    return render_template('ecfr_parser.html'), df_bs.to_csv('/downloads', index=False)
+    return render_template('ecfr_parser.html', data=output)
