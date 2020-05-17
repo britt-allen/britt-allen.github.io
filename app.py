@@ -2,9 +2,12 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route('/ecfr_parser', methods=['POST', 'GET'])
-
+@app.route('/ecfr_parser', methods=['GET'])
 def ecfr_parser():
+      return render_template('ecfr_parser.html')
+
+@app.route('/ecfr_process', methods=['POST'])
+def ecfr_process():
     if request.method == "POST":
         from bs4 import BeautifulSoup as bs
         import pandas as pd
@@ -55,8 +58,8 @@ def ecfr_parser():
 
         output = df_bs.to_csv('/downloads', index=False)
 
-    return send_file('ecfr_parser.html', data=output)
-    # return output
+    return send_file()
+
 
 if __name__ == "__main__":
     app.run(debug=True)
