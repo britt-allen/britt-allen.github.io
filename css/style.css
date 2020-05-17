@@ -429,14 +429,14 @@ main {
     /* -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); */
-    text-align: center;
+    /* text-align: center; */
     left: 0;
     right: 0;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: .3s all ease;
+    /* -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
-    transition: .3s all ease;
+    transition: .3s all ease; */
 }
 
 .portfolio-list li a .text h3 {
