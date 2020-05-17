@@ -376,13 +376,11 @@ main {
 .portfolio-list {
     padding: 0;
     margin: 0;
-    max-width: 100%;
 }
 
 .portfolio-list li {
     padding: 0;
     margin: 0 0 20px 0;
-    max-width: 100%;
     display: block;
     list-style: none;
     padding: 10px;
@@ -425,18 +423,18 @@ main {
 
 .portfolio-list li a .text {
     position: absolute;
-    /* top: 50%; */
-    /* -webkit-transform: translateY(-50%);
+    top: 50%;
+    -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%); */
-    /* text-align: center; */
+    transform: translateY(-50%);
+    text-align: center;
     left: 0;
     right: 0;
     opacity: 0;
     visibility: hidden;
-    /* -webkit-transition: .3s all ease;
+    -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
-    transition: .3s all ease; */
+    transition: .3s all ease;
 }
 
 .portfolio-list li a .text h3 {
