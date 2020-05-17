@@ -251,14 +251,14 @@ body.offcanvas-open .site-wrap {
     right: 20px;
     text-transform: uppercase;
     letter-spacing: .1em;
-    font-size: 27px;
+    font-size: 25px;
     top: 20px;
     color: #000;
 }
 
 .offcanvas-toggle:hover {
     color: #000;
-    opacity: .7;
+    opacity: 1;
 }
 
 .offcanvas-toggle.light {
