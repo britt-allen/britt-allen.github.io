@@ -77,14 +77,14 @@
                                 <img class="d-block w-100" src="media/psql_1.png">
                                 <br/><br/>
                                 <code><pre>
-                                    SELECT UserID,
-                                    SUM(CASE 
-                                        WHEN Returned = 1 THEN -1*(OrderAmount)
-                                        WHEN Returned = 0 THEN (OrderAmount)
-                                        ELSE 0 END) as TotalOrderAmount
-                                    FROM Orders
-                                    GROUP BY UserID
-                                    ORDER BY UserID;</pre></code>
+                            SELECT UserID,
+                            SUM(CASE 
+                                WHEN Returned = 1 THEN -1*(OrderAmount)
+                                WHEN Returned = 0 THEN (OrderAmount)
+                                ELSE 0 END) as TotalOrderAmount
+                            FROM Orders
+                            GROUP BY UserID
+                            ORDER BY UserID;</pre></code>
                             </p>
                         </div>
                     </div>
