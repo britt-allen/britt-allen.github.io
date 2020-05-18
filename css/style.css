@@ -1485,10 +1485,14 @@ main {
     }
 }
 
-.carousel-control-prev,
+.carousel-control-prev {
+    align-items: flex-start;
+    margin-left: -60px;
+}
+
 .carousel-control-next {
     align-items: flex-start;
-    margin-right: -65px;
+    margin-right: -60px;
 }
 
 .carousel-control-next-icon:after {
