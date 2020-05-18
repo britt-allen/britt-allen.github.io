@@ -1490,12 +1490,13 @@ main {
 
 .carousel-control-next {
     align-items: flex-start;
-    margin-right: -52px;
+    margin-right: -65px;
 }
 
 .carousel-control-next-icon:after {
     content: 'Next >>';
     font-size: 18px;
+    font-weight: bold;
     color: #F73859;
 }
 
