@@ -74,7 +74,7 @@
                                 <h2>SQL Code Snippets</h2>
                                 <br/> Several code snippets I wrote for a variety of problems.
                                 <br/>
-                                <img class="d-block w-100" src="media/psql_1.png">
+                                <a href="media/psql_1.png" target="_blank" rel="noopener noreferrer"><img class="d-block w-100" src="media/psql_1.png"></a>
                                 <code><pre>
         SELECT UserID,
         SUM(CASE 
@@ -93,6 +93,26 @@
         FROM Orders) 
         WHERE DateRank = 1;</pre></code>
                                 <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
+                                <br/>
+                                <a href="media/psql_2.png" target="_blank" rel="noopener noreferrer"><img class="d-block w-100" src="media/psql_2.png"></a>
+                                <code><pre>
+        SELECT Quiz, Score
+        FROM ( 
+            SELECT StudentID, Quiz, Score,
+            RANK() OVER (PARTITION BY StudentID ORDER BY Score DESC) ScoreRank
+        FROM Students) 
+        WHERE ScoreRank = 2 AND StudentID = 3;</pre>
+                                <!-- <hr>
+                                <pre>
+        SELECT Quiz, Score
+FROM ( 
+SELECT StudentID, Quiz, Score,
+RANK() OVER (PARTITION BY StudentID ORDER BY Score DESC) ScoreRank
+FROM Students) WHERE ScoreRank = 2 AND StudentID = 3;
+</pre> -->
+                                </code>
+                                <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
+
                             </p>
                         </div>
                         <div class="carousel-item">
