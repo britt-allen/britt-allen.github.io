@@ -1494,8 +1494,9 @@ main {
 .carousel-control-next-icon:after {
     content: 'Next >';
     font-size: 22px;
-    color: black;
+    color: #000000;
     margin-right: 50px;
+    right: 50px;
 }
 
 
@@ -1507,7 +1508,7 @@ main {
 
 .carousel-indicators li {
     background-color: #999;
-    background-color: rgba(70, 70, 70, 0.25);
+    /* background-color: rgba(70, 70, 70, 0.25); */
     bottom: -50px;
 }
 
