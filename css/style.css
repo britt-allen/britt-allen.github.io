@@ -1494,7 +1494,7 @@ main {
 }
 
 .carousel-control-next-icon:after {
-    content: 'Next Project >>';
+    content: 'Next Item >>';
     font-size: 18px;
     font-weight: bold;
     color: #F73859;
