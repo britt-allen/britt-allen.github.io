@@ -1492,9 +1492,10 @@ main {
 }
 
 .carousel-control-next-icon:after {
-    content: 'next >';
-    font-size: 20px;
+    content: 'Next >';
+    font-size: 22px;
     color: black;
+    margin-right: 50px;
 }
 
 
