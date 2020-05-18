@@ -85,7 +85,14 @@
         GROUP BY UserID
         ORDER BY UserID;</pre></code>
                                 <br/>
-                                <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a>
+                                <code><pre>
+        SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category
+        FROM (
+            SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category,
+            RANK() OVER (PARTITION BY OrderID ORDER BY UpdateDate DESC) DateRank
+        FROM Orders) 
+        WHERE DateRank = 1;</pre></code>
+                                <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
                             </p>
                         </div>
                         <div class="carousel-item">
