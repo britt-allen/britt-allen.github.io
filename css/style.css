@@ -1507,8 +1507,13 @@ main {
 .carousel-indicators li {
     background-color: #999;
     background-color: rgba(70, 70, 70, 0.25);
+    bottom: -50px;
 }
 
 .carousel-indicators .active {
     background-color: #F73859;
+}
+
+.carousel-inner {
+    margin-bottom: 50px;
 }
