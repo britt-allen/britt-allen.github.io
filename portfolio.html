@@ -71,103 +71,119 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <p>
-                                <h2>Term Deposit Predictions with Classsification Algorithms</h2>
-                                <br/>
-                                <h4>Goal</h4> Build a binary classification model to predict if a customer will make a term deposit. <br/><br/>
-                                <h4>The Data</h4> The <a href="media/td_data_dict.png" target="_blank" rel="noopener noreferrer">data</a> comes from marketing campaigns of a bank. Often, more than one contact to the same customer was required, in order to
-                                know if a sign up for the product (term deposit) would be (yes) or (no). Term deposits, also known as, a certificate of deposit, (CD), are a type of savings account that has a fixed interest rate and fixed date of withdrawal,
-                                known as the maturity date. Typically there are no risks associated with these and the longer the term length, the more you will earn.
+                                <h2>My SQL Code Snippets</h2>
+                                <br/> Several code snippets I wrote for a variety of problems.
                                 <br/><br/>
-                                <img class="d-block w-100" src="media/td_1.png">
-                                <br/>
-                                <p>We can see that we have balanced classes.</p>
-                                <br/>
-                                <img class="d-block w-100" src="media/td_2.png">
-                                <br/>
-                                <p>Median balance distributions are higher and wider for Age Groups who signed up (“yes”).</p>
-                                <br/>
-                                <img class="d-block w-100" src="media/td_3.png">
-                                <br/>
-                                <p>The movement indicates that average balances get higher as customers get older, which the exception of the GI Gen (folks who are typically on limited/fixed incomes). Again, balances are higher for Age Groups who signed
-                                    up (“yes”).</p>
-                                <br/><br/>
-                                <img class="d-block w-100" src="media/td_4.png">
-                                <br/>
-                                <p>To really drive the point home that balances move in the same direction as age we removed the product signup slicing ("yes" vs. "no"). It will be clearer why I am focusing on this in the next visual.</p>
-                                <br/>
-                                <img class="d-block w-100" src="media/td_5.png">
-                                <br/>
-                                <p>As we saw with the last three visuals as balances go up and folks get older, so do their tendency to make term deposits. Yet, 76% of our customer base is made up of the least-/second-least wealthiest age groups.</p>
-                                <br/>
-                                <img class="d-block w-100" src="media/td_6.png">
-                                <br/>
-                                <p>There are three points to takeaway from this vusual. <b>1)</b> 53% of marketing activity was in months with low CVs (black). <b>2)</b> In contrast, only 11% of our marketing activity was in the months with the top-three
-                                    highest CVs (blue). <b>3)</b> Less than a quarter (24%) of marketing activity was in months that converted customers at rates of 56% or higher.</p>
-                                <br/>
-                                <img class="d-block w-100" src="media/td_7.png">
-                                <br/>
-                                <p>Here's a view of our model performance. I chose the Logistic Regression model because it is interpretable and it generalized well on our unseen data to the other models (least amount of overfitting). </p>
-                                <br/>
-                                <h4>Insights via Model Coefficients</h4>
-                                <li>As successful outcomes of previous marketing campaigns increase by one unit, a customer is 1.9x as likely to sign up</li>
-                                <li>As marketing activity increases by one unit in Mar, Sept, Oct, and Dec – a customer is 1.3x, 1.17x, 1.15x, and 1.12x as likely to sign up</li>
-                                <li>As the level of college education increases by one unit, a customer is 16% as likely to sign up</li>
-                                <li>As the age group, GI Gen (90+), increases by one unit, a customer is 10% as likely to sign up</li>
-                                <br/>
-                                <h4>Recommendations</h4>
-                                <li>Target customers with previous conversions</li>
-                                <li>Increase tele-marketing outreach in Mar, Sept, Oct, and Dec</li>
-                                <li>Target older, more educated, wealthier customers</li>
-                                <li>Target customers who converted on past campaigns</li>
-                                <br/>
-                                <a href="https://github.com/traintestbritt/capstone_term_deposit_predictions/tree/master/notebooks" target="_blank" rel="noopener noreferrer">Project Notebooks</a> | <a href="https://docs.google.com/presentation/d/19nOb9sbrnAcBxqYM0iHARhWqCdveEEp25AC6YmvHj9k/edit?usp=sharing"
-                                    target="_blank" rel="noopener noreferrer">Project Presentation</a>
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <p>
-                                <h2>REST APIs Training Materials</h2>
-                                <br/> These are the materials I developed for a past interview I did. I was simply asked to...
-                                <blockquote cite="https://www.huxley.net/bnw/four.html">
-                                    <p>Prepare a 10-15 minute presentation on a technical topic of your choice. This can be a specific technology, technical tool you’ve used (IDE, debuggers, git, etc.), etc. You can create any content that is helpful to
-                                        explain your topic, but what format that content takes is up to you.</p>
-                                </blockquote>
-                                The topic I chose was REST APIs and below are the materials I developed.
-                                <br/><br/>
-                                <h4>Video Demo with Subtitles</h4>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Xf1Bukmy7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <br/><br/>
-                                <h4>Docs Screenshot 🔗 <a href="https://docs.google.com/document/d/11ztFGIsIu_9US_ow_BGtE5M51Sjs1T0OSXHxWjFUhCo/edit" target="_blank" rel="noopener noreferrer">docs link</a></h4>
-                                <img class="d-block w-100" src="media/ak_docs.png">
-                                <br/><br/>
-                                <h4>Slides Screenshot 🔗 <a href="https://docs.google.com/presentation/d/1yZKGFwzmv2eTpnZ39RDN5Q-q5xlXvNJIVElo2AuUBls/edit" target="_blank" rel="noopener noreferrer">slides link</a></h4>
-                                <img class="d-block w-100" src="media/ak_slides.png">
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <p>
-                                <h2>My Most Popular Towards Data Science Post</h2>
-                                <br/> In this post I leverage Python library, Pandas, to code out four different ways to achieve an Index/Match, a popular nested Excel function.
-                                <br/><br/>
-                                <blockquote class="embedly-card" data-card-controls="0">
-                                    <h4><a href="https://towardsdatascience.com/name-your-favorite-excel-function-and-ill-teach-you-its-pandas-equivalent-7ee4400ada9f">Name Your Favorite Excel Function and I'll Teach You its Pandas Equivalent</a></h4>
-                                </blockquote>
-                                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                                <code><pre>
+                                    SELECT UserID,
+                                    SUM(CASE 
+                                        WHEN Returned = 1 THEN -1*(OrderAmount)
+                                        WHEN Returned = 0 THEN (OrderAmount)
+                                        ELSE 0 END) as TotalOrderAmount
+                                    FROM Orders
+                                    GROUP BY UserID
+                                    ORDER BY UserID;</pre></code>
                             </p>
                         </div>
                     </div>
-                    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <div class="carousel-item">
+                        <p>
+                            <h2>Term Deposit Predictions with Classsification Algorithms</h2>
+                            <br/>
+                            <h4>Goal</h4> Build a binary classification model to predict if a customer will make a term deposit. <br/><br/>
+                            <h4>The Data</h4> The <a href="media/td_data_dict.png" target="_blank" rel="noopener noreferrer">data</a> comes from marketing campaigns of a bank. Often, more than one contact to the same customer was required, in order to know
+                            if a sign up for the product (term deposit) would be (yes) or (no). Term deposits, also known as, a certificate of deposit, (CD), are a type of savings account that has a fixed interest rate and fixed date of withdrawal, known
+                            as the maturity date. Typically there are no risks associated with these and the longer the term length, the more you will earn.
+                            <br/><br/>
+                            <img class="d-block w-100" src="media/td_1.png">
+                            <br/>
+                            <p>We can see that we have balanced classes.</p>
+                            <br/>
+                            <img class="d-block w-100" src="media/td_2.png">
+                            <br/>
+                            <p>Median balance distributions are higher and wider for Age Groups who signed up (“yes”).</p>
+                            <br/>
+                            <img class="d-block w-100" src="media/td_3.png">
+                            <br/>
+                            <p>The movement indicates that average balances get higher as customers get older, which the exception of the GI Gen (folks who are typically on limited/fixed incomes). Again, balances are higher for Age Groups who signed up (“yes”).</p>
+                            <br/><br/>
+                            <img class="d-block w-100" src="media/td_4.png">
+                            <br/>
+                            <p>To really drive the point home that balances move in the same direction as age we removed the product signup slicing ("yes" vs. "no"). It will be clearer why I am focusing on this in the next visual.</p>
+                            <br/>
+                            <img class="d-block w-100" src="media/td_5.png">
+                            <br/>
+                            <p>As we saw with the last three visuals as balances go up and folks get older, so do their tendency to make term deposits. Yet, 76% of our customer base is made up of the least-/second-least wealthiest age groups.</p>
+                            <br/>
+                            <img class="d-block w-100" src="media/td_6.png">
+                            <br/>
+                            <p>There are three points to takeaway from this vusual. <b>1)</b> 53% of marketing activity was in months with low CVs (black). <b>2)</b> In contrast, only 11% of our marketing activity was in the months with the top-three highest
+                                CVs (blue). <b>3)</b> Less than a quarter (24%) of marketing activity was in months that converted customers at rates of 56% or higher.</p>
+                            <br/>
+                            <img class="d-block w-100" src="media/td_7.png">
+                            <br/>
+                            <p>Here's a view of our model performance. I chose the Logistic Regression model because it is interpretable and it generalized well on our unseen data to the other models (least amount of overfitting). </p>
+                            <br/>
+                            <h4>Insights via Model Coefficients</h4>
+                            <li>As successful outcomes of previous marketing campaigns increase by one unit, a customer is 1.9x as likely to sign up</li>
+                            <li>As marketing activity increases by one unit in Mar, Sept, Oct, and Dec – a customer is 1.3x, 1.17x, 1.15x, and 1.12x as likely to sign up</li>
+                            <li>As the level of college education increases by one unit, a customer is 16% as likely to sign up</li>
+                            <li>As the age group, GI Gen (90+), increases by one unit, a customer is 10% as likely to sign up</li>
+                            <br/>
+                            <h4>Recommendations</h4>
+                            <li>Target customers with previous conversions</li>
+                            <li>Increase tele-marketing outreach in Mar, Sept, Oct, and Dec</li>
+                            <li>Target older, more educated, wealthier customers</li>
+                            <li>Target customers who converted on past campaigns</li>
+                            <br/>
+                            <a href="https://github.com/traintestbritt/capstone_term_deposit_predictions/tree/master/notebooks" target="_blank" rel="noopener noreferrer">Project Notebooks</a> | <a href="https://docs.google.com/presentation/d/19nOb9sbrnAcBxqYM0iHARhWqCdveEEp25AC6YmvHj9k/edit?usp=sharing"
+                                target="_blank" rel="noopener noreferrer">Project Presentation</a>
+                        </p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>
+                            <h2>REST APIs Training Materials</h2>
+                            <br/> These are the materials I developed for a past interview I did. I was simply asked to...
+                            <blockquote cite="https://www.huxley.net/bnw/four.html">
+                                <p>Prepare a 10-15 minute presentation on a technical topic of your choice. This can be a specific technology, technical tool you’ve used (IDE, debuggers, git, etc.), etc. You can create any content that is helpful to explain
+                                    your topic, but what format that content takes is up to you.</p>
+                            </blockquote>
+                            The topic I chose was REST APIs and below are the materials I developed.
+                            <br/><br/>
+                            <h4>Video Demo with Subtitles</h4>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/-Xf1Bukmy7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <br/><br/>
+                            <h4>Docs Screenshot 🔗 <a href="https://docs.google.com/document/d/11ztFGIsIu_9US_ow_BGtE5M51Sjs1T0OSXHxWjFUhCo/edit" target="_blank" rel="noopener noreferrer">docs link</a></h4>
+                            <img class="d-block w-100" src="media/ak_docs.png">
+                            <br/><br/>
+                            <h4>Slides Screenshot 🔗 <a href="https://docs.google.com/presentation/d/1yZKGFwzmv2eTpnZ39RDN5Q-q5xlXvNJIVElo2AuUBls/edit" target="_blank" rel="noopener noreferrer">slides link</a></h4>
+                            <img class="d-block w-100" src="media/ak_slides.png">
+                        </p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>
+                            <h2>My Most Top Trending Towards Data Science Post</h2>
+                            <br/> In this post I leveraged Python library, Pandas, to code out four different ways to achieve an Index/Match, a popular nested Excel function.
+                            <br/><br/>
+                            <blockquote class="embedly-card" data-card-controls="0">
+                                <h4><a href="https://towardsdatascience.com/name-your-favorite-excel-function-and-ill-teach-you-its-pandas-equivalent-7ee4400ada9f">Name Your Favorite Excel Function and I'll Teach You its Pandas Equivalent</a></h4>
+                            </blockquote>
+                            <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                        </p>
+                    </div>
+                </div>
+                <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a> -->
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
+    </div>
 
-        </main>
+    </main>
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
