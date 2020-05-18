@@ -71,20 +71,20 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <p>
-                                <h2>My SQL Code Snippets</h2>
+                                <h2>SQL Code Snippets</h2>
                                 <br/> Several code snippets I wrote for a variety of problems.
                                 <br/>
                                 <img class="d-block w-100" src="media/psql_1.png">
                                 <br/><br/>
                                 <code><pre>
-                            SELECT UserID,
-                            SUM(CASE 
-                                WHEN Returned = 1 THEN -1*(OrderAmount)
-                                WHEN Returned = 0 THEN (OrderAmount)
-                                ELSE 0 END) as TotalOrderAmount
-                            FROM Orders
-                            GROUP BY UserID
-                            ORDER BY UserID;</pre></code>
+        SELECT UserID,
+        SUM(CASE 
+            WHEN Returned = 1 THEN -1*(OrderAmount)
+            WHEN Returned = 0 THEN (OrderAmount)
+            ELSE 0 END) as TotalOrderAmount
+        FROM Orders
+        GROUP BY UserID
+        ORDER BY UserID;</pre></code>
                                 <br/>
                                 <a href="http://www.sqlfiddle.com/#!17/c2485/2" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a>
                             </p>
