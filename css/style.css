@@ -1503,13 +1503,14 @@ main {
 }
 
 .carousel-control-next-icon:after {
-    content: '>';
+    content: 'next';
     font-size: 55px;
     color: #F73859;
 }
 
-.carousel-control-prev-icon:after {
+
+/* .carousel-control-prev-icon:after {
     content: '<';
     font-size: 55px;
     color: #F73859;
-}
+} */
