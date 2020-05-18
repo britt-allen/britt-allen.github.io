@@ -390,11 +390,10 @@ main {
     transition: .3s all ease;
 }
 
-
-/* .portfolio-list li:hover {
+.portfolio-list li:hover {
     -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
-} */
+}
 
 .portfolio-list li a {
     display: block;
@@ -408,7 +407,7 @@ main {
     left: 0;
     bottom: 0;
     right: 0;
-    /* background: #F73859; */
+    background: #F73859;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
