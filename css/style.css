@@ -1485,14 +1485,21 @@ main {
     }
 }
 
+.carousel-control-prev,
+.carousel-control-next {
+    align-items: flex-start;
+    ;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     height: 100px;
     width: 100px;
-    background-size: 100%, 100%;
-    border-radius: 50%;
-    border: 1px solid black;
-    background-image: none;
+    /* outline: black; */
+    /* background-size: 100%, 100%; */
+    /* border-radius: 50%; */
+    /* border: 1px solid black; */
+    /* background-image: none; */
 }
 
 .carousel-control-next-icon:after {
