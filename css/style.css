@@ -1485,18 +1485,21 @@ main {
     }
 }
 
-.carousel-control-prev,
+
+/* .carousel-control-prev, */
+
 .carousel-control-next {
     align-items: flex-start;
-    ;
+    margin-right: -100px;
+    color: #000000;
 }
 
 .carousel-control-next-icon:after {
     content: 'Next >';
     font-size: 22px;
     color: #000000;
-    margin-right: -50px;
-    right: 50px;
+    /* margin-right: -50px;
+    right: 50px; */
 }
 
 
