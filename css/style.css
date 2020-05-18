@@ -1495,7 +1495,7 @@ main {
     content: 'Next >';
     font-size: 22px;
     color: #000000;
-    margin-right: 50px;
+    margin-right: -50px;
     right: 50px;
 }
 
