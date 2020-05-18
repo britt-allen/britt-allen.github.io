@@ -1503,9 +1503,9 @@ main {
 }
 
 .carousel-control-next-icon:after {
-    content: 'next';
-    font-size: 55px;
-    color: #F73859;
+    content: 'next >';
+    font-size: 25px;
+    color: black;
 }
 
 
@@ -1514,3 +1514,12 @@ main {
     font-size: 55px;
     color: #F73859;
 } */
+
+.carousel-indicators li {
+    background-color: #999;
+    background-color: rgba(70, 70, 70, 0.25);
+}
+
+.carousel-indicators .active {
+    background-color: #F73859;
+}
