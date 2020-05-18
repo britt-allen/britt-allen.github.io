@@ -76,22 +76,22 @@
                                 <br/>
                                 <img class="d-block w-100" src="media/psql_1.png">
                                 <code><pre>
-        SELECT UserID,
-        SUM(CASE 
-            WHEN Returned = 1 THEN -1*(OrderAmount)
-            WHEN Returned = 0 THEN (OrderAmount)
-            ELSE 0 END) as TotalOrderAmount
-        FROM Orders
-        GROUP BY UserID
-        ORDER BY UserID;</pre></code>
+SELECT UserID,
+SUM(CASE 
+    WHEN Returned = 1 THEN -1*(OrderAmount)
+    WHEN Returned = 0 THEN (OrderAmount)
+    ELSE 0 END) as TotalOrderAmount
+FROM Orders
+GROUP BY UserID
+ORDER BY UserID;</pre></code>
                                 <br/>
                                 <code><pre>
-        SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category
-        FROM (
-            SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category,
-            RANK() OVER (PARTITION BY OrderID ORDER BY UpdateDate DESC) DateRank
-        FROM Orders) 
-        WHERE DateRank = 1;</pre></code>
+SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category
+FROM (
+    SELECT OrderID, UserID, OrderDate, OrderAmount, UpdateDate, Returned, Category,
+    RANK() OVER (PARTITION BY OrderID ORDER BY UpdateDate DESC) DateRank
+FROM Orders) 
+WHERE DateRank = 1;</pre></code>
                                 <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
                             </p>
                         </div>
