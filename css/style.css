@@ -1484,3 +1484,11 @@ main {
         stroke-dashoffset: -136px;
     }
 }
+
+.carousel-indicators li {
+    background-color: #0000;
+}
+
+.carousel-indicators .active {
+    background-color: #F73859;
+}
