@@ -1516,7 +1516,7 @@ main {
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    color: #b3b3b3;
+    /* color: #b3b3b3; */
     display: block;
 }
 
