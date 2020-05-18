@@ -1491,7 +1491,7 @@ main {
     margin-left: -60px;
 }
 
-@media (max-device-width: 400px) {
+@media (max-width: 400px) {
     .carousel-control-next {
         align-items: flex-start;
         margin-right: -20px;
@@ -1503,7 +1503,7 @@ main {
     margin-right: -60px;
 }
 
-@media (max-device-width: 400px) {
+@media (max-width: 400px) {
     .carousel-control-next-icon:after {
         content: '>>';
         font-size: 20px;
