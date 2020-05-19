@@ -1488,7 +1488,7 @@ main {
 
 .carousel-control-prev {
     align-items: flex-start;
-    margin-left: -60px;
+    margin-left: -30px;
 }
 
 .carousel-control-next {
@@ -1499,7 +1499,7 @@ main {
 @media only screen and (max-width: 1125px) {
     .carousel-control-prev {
         align-items: flex-start;
-        margin-left: -20px;
+        margin-left: -10px;
     }
 }
 
@@ -1520,6 +1520,7 @@ main {
 .carousel-control-prev-icon:after {
     content: '<< Last Item';
     font-size: 18px;
+    font-weight: bold;
     color: #F73859;
 }
 
