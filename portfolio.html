@@ -116,8 +116,7 @@
             SELECT StudentId, Quiz, Score,
             RANK() OVER (PARTITION BY StudentId ORDER BY Score DESC) ScoreRank
         FROM Students) 
-        WHERE ScoreRank = 2 AND StudentId = 3;
-                                </pre>
+        WHERE ScoreRank = 2 AND StudentId = 3;</pre>
                                 <hr>
                                 <pre>
         CREATE TABLE StudentRank AS
@@ -131,8 +130,7 @@
         LEFT OUTER JOIN StudentRank sr2
         ON sr1.StudentId = sr2.StudentId AND sr2.RankId =1
         WHERE sr1.RankId = 2
-        ORDER BY sr2.Name;
-                                </pre>
+        ORDER BY sr2.Name;</pre>
                                 </code>
                                 <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
 
