@@ -128,7 +128,7 @@
         SELECT sr2.Name, sr2.AdministrationDate as RecentTestDate, sr2.Score as RecentTestScore, sr1.AdministrationDate as PriorTestDate, sr1.Score as PriorTestScore
         FROM StudentRank sr1
         LEFT OUTER JOIN StudentRank sr2
-        ON sr1.StudentId = sr2.StudentId AND sr2.RankId =1
+        ON sr1.StudentId = sr2.StudentId AND sr2.RankId = 1
         WHERE sr1.RankId = 2
         ORDER BY sr2.Name;</pre>
                                 </code>
