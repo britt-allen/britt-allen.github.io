@@ -9,7 +9,7 @@
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
-    --pink: #e83e8c;
+    --pink: #868e96;
     --red: #bc5148;
     --orange: #f4b214;
     --yellow: #ffc107;
@@ -38,8 +38,8 @@
 
 @media print {
     *,
-    :after,
-    :before {
+     :after,
+     :before {
         text-shadow: none!important;
         -webkit-box-shadow: none!important;
         box-shadow: none!important
@@ -245,7 +245,7 @@ a {
 }
 
 a:hover {
-    color: #da092d;
+    color: #868e96;
     text-decoration: underline
 }
 
@@ -625,7 +625,7 @@ samp {
 code {
     padding: 0.2rem 0.4rem;
     font-size: 90%;
-    color: #bd4147;
+    color: #868e96;
     background-color: #f8f9fa;
     border-radius: 0.25rem
 }
@@ -2615,7 +2615,7 @@ fieldset[disabled] a.btn {
 .btn-primary:hover {
     color: #fff;
     background-color: #f6133a;
-    border-color: #f20a32
+    border-color: #868e96
 }
 
 .btn-primary.focus,
@@ -2634,7 +2634,7 @@ fieldset[disabled] a.btn {
 .btn-primary:not([disabled]):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #f20a32;
+    background-color: #868e96;
     border-color: #e6092f;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(247, 56, 89, 0.5);
     box-shadow: 0 0 0 0.2rem rgba(247, 56, 89, 0.5)
@@ -3165,7 +3165,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-link:hover {
-    color: #da092d;
+    color: #868e96;
     text-decoration: underline;
     background-color: transparent;
     border-color: transparent
@@ -4845,7 +4845,7 @@ tbody.collapse.show {
 
 .page-link:focus,
 .page-link:hover {
-    color: #da092d;
+    color: #868e96;
     text-decoration: none;
     background-color: #e9ecef;
     border-color: #ddd
@@ -4919,7 +4919,7 @@ tbody.collapse.show {
 .badge-primary[href]:hover {
     color: #fff;
     text-decoration: none;
-    background-color: #f20a32
+    background-color: #868e96
 }
 
 .badge-secondary {
@@ -6264,7 +6264,7 @@ button.close {
 
 a.bg-primary:focus,
 a.bg-primary:hover {
-    background-color: #f20a32!important
+    background-color: #868e96!important
 }
 
 .bg-secondary {
@@ -8993,7 +8993,7 @@ a.bg-dark:hover {
 
 a.text-primary:focus,
 a.text-primary:hover {
-    color: #f20a32!important
+    color: #868e96!important
 }
 
 .text-secondary {
