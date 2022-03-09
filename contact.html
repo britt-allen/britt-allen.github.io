@@ -110,38 +110,20 @@
         <main>
             <!-- <a href="index.html" class="home-button"><span class="fa fa-home"></span></a> -->
             <h1 class="mb-5">Contact Me</h1>
-            <form class="gform" action="https://script.google.com/macros/s/AKfycbzW7wIJxf0O6bE2dAadjCSCqZgph4kPB36vXS9GtQ/exec" method="post">
-
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Full Name" name="name">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <input type="email" class="form-control" placeholder="Email Address" name="email">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control" placeholder="Phone" name="phone">
-                    </div>
-                </div>
-                <div class="row mb-4">
-                    <div class="col-md-12">
-                        <textarea name="message" id="" class="form-control" placeholder="Please clearly explain why you're reaching out." cols="30" rows="10"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="submit" class="btn btn-primary btn-block" value="Send Message">
-                    </div>
-                </div>
-
-                <div style="display:none" class="thankyou_message">
-                    <br/>
-                    <h4>Thanks for contacting me. I will respond as soon as I can.</h4>
-                </div>
+            <form action="mailto:thebrittallen@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+                Name:<br>
+                <input type="text" size="19" name="Full-Name"><br><br> Email:
+                <br>
+                <input type="email" name="Email"><br><br> Message:
+                <br>
+                <textarea name="Message" rows="6″ cols=" 20″>
+    </textarea><br><br>
+                <button type="submit" value="Submit">Send</button>
+            </form>
+            <div style="display:none" class="thankyou_message">
+                <br/>
+                <h4>Thanks for contacting me. I will respond as soon as I can.</h4>
+            </div>
 
 
             </form>
