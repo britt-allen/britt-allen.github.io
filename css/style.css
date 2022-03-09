@@ -253,13 +253,13 @@ body.offcanvas-open .site-wrap {
     letter-spacing: .1em;
     font-size: 25px;
     font-weight: bold;
-    background-color: #fff;
+    /* background-color: #fff; */
     top: 18px;
-    color: #000;
+    color: #fff;
 }
 
 .offcanvas-toggle:hover {
-    color: #000;
+    color: #fff;
     opacity: .7;
 }
 
