@@ -224,8 +224,8 @@ header .navbar .cta-btn a {
 
 header .navbar .cta-btn a:hover {
     color: #fff !important;
-    -webkit-box-shadow: 2px 0 30px -5px rgba(247, 56, 89, 0.9);
-    box-shadow: 2px 0 30px -5px rgba(247, 56, 89, 0.9);
+    -webkit-box-shadow: 2px 0 30px -5px rgba(17, 85, 204, 1);
+    box-shadow: 2px 0 30px -5px rgba(17, 85, 204, 1);
 }
 
 .site-wrap {
