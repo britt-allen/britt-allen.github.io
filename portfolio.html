@@ -122,55 +122,36 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <p>
-                                <h2>SQL Code Snippets</h2>
-                                <br/> Several code snippets I wrote for a variety of problems.
+                                <h2> A look at my SQL and BigQuery skills
+                                </h2>
+                                <br/> I wrote this to demonstrate my SQL and BigQuery skills. I also wrote it for anyone working with Google Analytics or American Community Survey data. This article shows someone how to join these data in BigQuery and
+                                extract some basic insight. 👏🏾 it up if you find it useful!
                                 <br/><br/>
-                                <a href="media/psql_1.png" target="_blank" rel="noopener noreferrer"><img class="d-block w-100" src="media/psql_1.png"></a>
-                                <code><pre>
-        SELECT UserID,
-        SUM(CASE 
-            WHEN Returned = 1 THEN -1*(OrderAmount)
-            WHEN Returned = 0 THEN (OrderAmount)
-            ELSE 0 END) as TotalOrderAmount
-        FROM Orders
-        GROUP BY UserID
-        ORDER BY UserID;</pre>
-                                <hr>
-                                <pre>
-        SELECT *
-        FROM (
-            SELECT *,
-            RANK() OVER (PARTITION BY OrderID ORDER BY UpdateDate DESC) DateRank
-        FROM Orders) 
-        WHERE DateRank = 1;</pre></code>
-                                <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
-                                <br/>
-                                <a href="media/psql_2.png" target="_blank" rel="noopener noreferrer"><img class="d-block w-100" src="media/psql_2.png"></a>
-                                <code>
-                                <pre>
-        SELECT Quiz, Score
-        FROM ( 
-            SELECT StudentId, Quiz, Score,
-            RANK() OVER (PARTITION BY StudentId ORDER BY Score DESC) ScoreRank
-        FROM Students) 
-        WHERE ScoreRank = 2 AND StudentId = 3;</pre>
-                                <hr>
-                                <pre>
-        CREATE TABLE StudentRank AS
-        SELECT sr.StudentId, sr.Name, sr.AdministrationDate, sr.Score,
-        RANK ( ) OVER ( PARTITION BY StudentId
-        ORDER BY  AdministrationDate DESC) RankId
-        FROM Students sr;
-                                    
-        SELECT sr2.Name, sr2.AdministrationDate as RecentTestDate, sr2.Score as RecentTestScore, sr1.AdministrationDate as PriorTestDate, sr1.Score as PriorTestScore
-        FROM StudentRank sr1
-        LEFT OUTER JOIN StudentRank sr2
-        ON sr1.StudentId = sr2.StudentId AND sr2.RankId = 1
-        WHERE sr1.RankId = 2
-        ORDER BY sr2.Name;</pre>
-                                </code>
-                                <!-- <a href="http://www.sqlfiddle.com/#!17/887d2/1" target="_blank" rel="noopener noreferrer">Execute my answer on SQLFiddle</a> -->
-
+                                <blockquote class="embedly-card" data-card-controls="0">
+                                    <h4><a href="https://medium.com/@britt-allen/joining-american-community-survey-and-google-analytics-data-in-bigquery-and-extracting-insights-906a436c9c86">Joining American Community Survey and Google Analytics data in BigQuery and extracting insights
+                                    </a></h4>
+                                </blockquote>
+                                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+                            </p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>
+                                <h2> Health Equity Data Visualizations
+                                </h2>
+                                <br/> I designed these data viz mock ups in Python which GREATLY informed the current vizzes on <a href="https://covid19.ca.gov/equity/">covid19.ca.gov/equity</a>.
+                                <br/><br/>
+                                <script src="https://gist.github.com/britt-allen/d02c18210b24f6da0c67669b5df41d56.js"></script>
+                            </p>
+                        </div>
+                        <div class="carousel-item">
+                            <p>
+                                <h2>Top Trending Towards Data Science Post</h2>
+                                <br/> In this post I leveraged Python library, Pandas, to code out four different ways to achieve an Index/Match, a popular nested Excel function.
+                                <br/><br/>
+                                <blockquote class="embedly-card" data-card-controls="0">
+                                    <h4><a href="https://towardsdatascience.com/name-your-favorite-excel-function-and-ill-teach-you-its-pandas-equivalent-7ee4400ada9f">Name Your Favorite Excel Function and I'll Teach You its Pandas Equivalent</a></h4>
+                                </blockquote>
+                                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
                             </p>
                         </div>
                         <div class="carousel-item">
@@ -227,37 +208,6 @@
                                 <br/>
                                 <a href="https://github.com/britt-allen/capstone_term_deposit_predictions/tree/master/notebooks" target="_blank" rel="noopener noreferrer">Project Notebooks</a> | <a href="https://docs.google.com/presentation/d/19nOb9sbrnAcBxqYM0iHARhWqCdveEEp25AC6YmvHj9k/edit?usp=sharing"
                                     target="_blank" rel="noopener noreferrer">Project Presentation</a>
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <p>
-                                <h2>REST APIs Training Materials</h2>
-                                <br/> These are the materials I developed for a past interview I did. I was simply asked to...
-                                <blockquote cite="https://www.huxley.net/bnw/four.html">
-                                    <p>Prepare a 10-15 minute presentation on a technical topic of your choice. This can be a specific technology, technical tool you’ve used (IDE, debuggers, git, etc.), etc. You can create any content that is helpful to
-                                        explain your topic, but what format that content takes is up to you.</p>
-                                </blockquote>
-                                The topic I chose was REST APIs and below are the materials I developed.
-                                <br/><br/>
-                                <h4>Video Demo with Subtitles</h4>
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/-Xf1Bukmy7g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <br/><br/>
-                                <h4>Docs Screenshot 🔗 <a href="https://docs.google.com/document/d/11ztFGIsIu_9US_ow_BGtE5M51Sjs1T0OSXHxWjFUhCo/edit" target="_blank" rel="noopener noreferrer">docs link</a></h4>
-                                <img class="d-block w-100" src="media/ak_docs.png">
-                                <br/><br/>
-                                <h4>Slides Screenshot 🔗 <a href="https://docs.google.com/presentation/d/1yZKGFwzmv2eTpnZ39RDN5Q-q5xlXvNJIVElo2AuUBls/edit" target="_blank" rel="noopener noreferrer">slides link</a></h4>
-                                <img class="d-block w-100" src="media/ak_slides.png">
-                            </p>
-                        </div>
-                        <div class="carousel-item">
-                            <p>
-                                <h2>Top Trending Towards Data Science Post</h2>
-                                <br/> In this post I leveraged Python library, Pandas, to code out four different ways to achieve an Index/Match, a popular nested Excel function.
-                                <br/><br/>
-                                <blockquote class="embedly-card" data-card-controls="0">
-                                    <h4><a href="https://towardsdatascience.com/name-your-favorite-excel-function-and-ill-teach-you-its-pandas-equivalent-7ee4400ada9f">Name Your Favorite Excel Function and I'll Teach You its Pandas Equivalent</a></h4>
-                                </blockquote>
-                                <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
                             </p>
                         </div>
                     </div>
