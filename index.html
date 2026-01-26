@@ -4,47 +4,78 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO + Social -->
+    <meta name="description" content="Brittany Allen — Governor-appointed Senior Analytics Engineer at the CA Office of Data & Innovation. SQL, Python, and technical writing.">
+    <meta property="og:title" content="Brittany Allen">
+    <meta property="og:description" content="Senior Analytics Engineer at the CA Office of Data & Innovation">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://britt-allen.github.io/">
     <meta property="og:image" content="images/IMG_4268.jpeg" />
+
     <title>Brittany's Website</title>
+
     <style>
         h1 {
             color: #000000;
             font-family: "Gill Sans", sans-serif;
             font-size: 38px;
-            letter-spacing: 1px
+            letter-spacing: 1px;
         }
-        
+
         h2 {
             color: #000000;
             font-family: "Gill Sans", sans-serif;
             font-size: 22px;
-            letter-spacing: 1px
+            letter-spacing: 1px;
         }
-        
+
+        h3 {
+            color: #000000;
+            font-family: "Gill Sans", sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
         p {
             color: #1b1b1b;
             font-family: "Gill Sans", sans-serif;
             font-size: 20px;
-            letter-spacing: 1px
+            letter-spacing: 1px;
         }
-        
+
         .content {
             max-width: 765px;
             margin: auto;
+            padding: 1rem;
         }
-        
+
+        section {
+            margin-bottom: 2.5rem;
+        }
+
         ul.list {
             list-style: disc;
             margin-left: 32px;
             padding-left: 0;
         }
-        
+
         a {
             color: #1b1b1b;
         }
-        
+
         a:hover {
             color: rgb(14, 173, 205);
+        }
+
+        .links a {
+            margin-right: 12px;
+        }
+
+        .project {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1rem;
+            margin-top: 1rem;
         }
     </style>
 </head>
@@ -52,32 +83,79 @@
 <body>
     <div class="content">
 
-        <h1>Hi, I'm Brittany 👋🏾</h1>
+        <!-- HERO -->
+        <section class="hero">
+            <h1>Hi, I'm Brittany 👋🏾</h1>
 
-        <h2><a href="https://www.gov.ca.gov/2021/05/27/governor-newsom-announces-appointments-5-27-21/" target="_blank">Governor-appointed</a> Senior Analytics Engineer at the CA Office of Data & Innovation (ODI)</h2>
+            <h2>
+                <a href="https://www.gov.ca.gov/2021/05/27/governor-newsom-announces-appointments-5-27-21/" target="_blank">
+                    Governor-appointed
+                </a>
+                Senior Analytics Engineer at the CA Office of Data & Innovation (ODI)
+            </h2>
+        </section>
 
-        <p> 9+ years of experience in data. I <a href="https://github.com/cagov/data-infrastructure/commit/8fe1d721cb43311ad1ea58c106ee6d7472aeabfa" target="_blank">code in SQL</a>
-            and <a href="https://github.com/cagov/data-infrastructure/pull/182/commits/cfb7a09013569911d2d6d2e3e4a1f1e321ec3ea9" target="_blank">Python</a> and write <a href="https://medium.com/swlh/regular-expressions-in-python-and-pyspark-explained-code-included-53cbb22d4117"
-            target="_blank">technical guides</a>. Previously, I had a career as a marketer and got my B.S. in Marketing from Rutgers. </p>
+        <!-- ABOUT -->
+        <section class="about">
+            <p>
+                9+ years of experience in data. I
+                <a href="https://github.com/cagov/data-infrastructure/commit/8fe1d721cb43311ad1ea58c106ee6d7472aeabfa" target="_blank">code in SQL</a>
+                and
+                <a href="https://github.com/cagov/data-infrastructure/pull/182/commits/cfb7a09013569911d2d6d2e3e4a1f1e321ec3ea9" target="_blank">Python</a>
+                and write
+                <a href="https://medium.com/swlh/regular-expressions-in-python-and-pyspark-explained-code-included-53cbb22d4117" target="_blank">technical guides</a>.
+                Previously, I had a career as a marketer and got my B.S. in Marketing from Rutgers.
+            </p>
 
-        <h2>Human based in Sacramento, CA – 2,836 walking miles from my east coast roots in NJ</h2>
+            <h2>Human based in Sacramento, CA – 2,836 walking miles from my east coast roots in NJ</h2>
+        </section>
 
-        <p> In my free time, I... </p>
-        <ul class="list">
-            <li>
-                <p>volunteer with V-O-Cal as a crew leader and trail builder</p>
-            </li>
-            <li>
-                <p>read, write, or do photography
-            </li>
-            <li>
-                <p>go to therapy to further my self-growth</p>
-            </li>
-        </ul>
-        <p> I also like to sing, dance, cosplay, hike, go camping, and play board games.</p>
-        <p> Hype:  <a href="hype.html"
-            target="_blank">What others have to say about me</a> | Socials: <a href="https://www.linkedin.com/in/britt-allen" target="_blank">LinkedIn</a> <a href="https://github.com/britt-allen" target="_blank">GitHub</a> <a href="https://medium.com/@britt-allen" target="_blank">Medium</a>
-        </p>
+        <!-- PERSONAL -->
+        <section class="personal">
+            <p>In my free time, I…</p>
+
+            <ul class="list">
+                <li>
+                    <p>volunteer with V-O-Cal as a crew leader and trail builder</p>
+                </li>
+                <li>
+                    <p>read, write, or do photography</p>
+                </li>
+                <li>
+                    <p>go to therapy to further my self-growth</p>
+                </li>
+            </ul>
+
+            <p>I also like to sing, dance, cosplay, hike, go camping, and play board games.</p>
+        </section>
+
+        <!-- PROJECTS (OPTIONAL BUT READY) -->
+        <section class="projects">
+            <h2>Selected Work</h2>
+
+            <div class="project">
+                <h3>CA Office of Data & Innovation — Data Infrastructure</h3>
+                <p>
+                    Analytics engineering work focused on SQL pipelines, Python tooling,
+                    and technical documentation for statewide data systems.
+                </p>
+                <a href="https://github.com/cagov/data-infrastructure" target="_blank">View on GitHub</a>
+            </div>
+        </section>
+
+        <!-- LINKS -->
+        <section class="links">
+            <p>
+                Hype:
+                <a href="hype.html" target="_blank">What others have to say about me</a>
+                |
+                Socials:
+                <a href="https://www.linkedin.com/in/britt-allen" target="_blank">LinkedIn</a>
+                <a href="https://github.com/britt-allen" target="_blank">GitHub</a>
+                <a href="https://medium.com/@britt-allen" target="_blank">Medium</a>
+            </p>
+        </section>
+
     </div>
 </body>
 
