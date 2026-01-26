@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Brittany Allen — Portfolio</title>
+
+    <style>
+        h1, h2, h3 {
+            color: #000000;
+            font-family: "Gill Sans", sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 { font-size: 34px; }
+        h2 { font-size: 24px; margin-top: 2.5rem; }
+        h3 { font-size: 18px; }
+
+        p {
+            color: #1b1b1b;
+            font-family: "Gill Sans", sans-serif;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            max-width: 765px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        .example {
+            border-top: 1px solid #e0e0e0;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        a {
+            color: #1b1b1b;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: rgb(14, 173, 205);
+        }
+
+        .back {
+            margin-bottom: 2rem;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 15px; /* Adjusting to be smaller than 18px p tag */
+            color: #d63384; /* Optional: adds a subtle color to make it pop */
+        }
+        .example p strong {
+            font-size: 18px; /* Match site's standard paragraph size */
+            font-weight: 600; /* Medium-heavy weight instead of the default "bold" */
+        }
+
+        .example code {
+            background-color: #f0f0f0;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 14px; /* Scaled down to look better with the body text */
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="back">
+            <a href="index.html">← Home</a>
+        </div>
+
+        <h1>Portfolio</h1>
+
+        <p>
+            This page highlights selected examples of my work in analytics engineering,
+            data analysis, and technical writing.
+        </p>
+
+        <h2>Analytics engineering</h2>
+
+        <div class="example">
+            <h3>1. California freeway performance modeling (dbt & SQL)</h3>
+            <p>
+            I developed and documented a data model to detect traffic bottlenecks across California's freeway network. I used
+            complex concurrent criteria and window functions to calculate spatial and temporal speed deltas across millions
+            of rows. I developed geospatial logic for directional freeway postmiles to maintain geographically accurate
+            upstream and downstream calculations. The model uses an incremental materialization for scalability and cost
+            optimization. I also built a validation model to filter for high-quality sensor data.
+            </p>
+            <p>
+            This work translates the "<a href="https://people.eecs.berkeley.edu/~varaiya/papers_ps.dir/BottleneckIdentification.pdf" target="_blank">Systematic Identification of Freeway Bottlenecks</a>" algorithm into production-ready SQL using dbt.
+            </p>
+            <p>
+                🔗
+                <a href="https://github.com/cagov/caldata-mdsa-caltrans-pems/commit/f117803b4d7d06e1669e687b9ca188e36e1f2938" target="_blank">
+                Bottleneck model
+                </a>
+            </p>
+        </div>
+
+        <div class="example">
+            <h3>2. Data architecture and governance</h3>
+            <p>
+            I designed a conceptual data architecture diagram illustrating Snowflake data warehouse
+            database layers, schemas, roles, and environments to support data governance and self-service analytics.
+            </p>
+            <p>
+                🔗 <a href="https://github.com/cagov/data-infrastructure/blob/main/docs/architecture/diagrams/data-platform-architecture.md" target="_blank">Architecture diagram</a>
+            </p>
+        </div>
+
+        <h2>Python</h2>
+
+        <div class="example">
+            <h3> 1. Unemployment Insurance user journey analysis</h3>
+            <p>
+            I consulted with EDD to architect and implement event tracking via Google Analytics, enabling the
+            first-ever capture of granular user behavior data on the UIO platform. I then performed a deep-dive
+            analysis of this data, visualizing the results with Python. The insights from my analysis were cited
+            on page 46 of a report solicited by Governor Newsom, directly informing the decision to overhaul digital
+            forms with intuitive, guided interactions. This work successfully transitioned the department toward a
+            data-driven, iterative approach to evaluating and improving the claimant experience.
+            </p>
+            <p>
+                🔗 <a href="https://www.govops.ca.gov/wp-content/uploads/sites/11/2020/09/Assessment.pdf" target="_blank">
+                    Governor's report (citation p. 46-50)</a>
+            </p>
+            <p>
+                🔗 <a href="files/EDD-Help-Button-Event-Tracking-Analysis.pdf" target="_blank">
+                    Python data analysis</a>
+            </p>
+        </div>
+
+        <h2>Technical writing</h2>
+
+        <div class="example">
+            <h3>1. Regular expressions in Python & PySpark</h3>
+            <p>
+                A technical guide breaking down regex concepts with real-world Python
+                and PySpark examples, written for practitioners.
+            </p>
+            <p>
+                🔗
+                <a href="https://medium.com/swlh/regular-expressions-in-python-and-pyspark-explained-code-included-53cbb22d4117" target="_blank">
+                    Read the article
+                </a>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
