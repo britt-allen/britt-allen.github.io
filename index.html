@@ -11,7 +11,7 @@
     <meta property="og:description" content="Brittany's website showcasing her work as an engineer, analyst, and technical writer.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://britt-allen.github.io/">
-    <meta property="og:image" content="images/IMG_4268.jpeg" />
+    <meta property="og:image" content="https://britt-allen.github.io/files/social-preview.jpeg" />
 
     <title>Brittany's Website</title>
 
@@ -51,12 +51,6 @@
             margin-bottom: 2.5rem;
         }
 
-        ul.list {
-            list-style: disc;
-            margin-left: 32px;
-            padding-left: 0;
-        }
-
         a {
             color: #92613e;
             text-decoration: underline;
@@ -66,19 +60,117 @@
             color: #6b4a2f;
         }
 
-        .links a {
-            margin-right: 12px;
+        /* Hamburger nav */
+        .navbar {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
         }
+
+        .hamburger-btn {
+            background: none;
+            color: #92613e;
+            border: none;
+            width: 88px;
+            height: 88px;
+            font-size: 40px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .hamburger-btn:hover {
+            color: #6b4a2f;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 96px;
+            right: 0;
+            background-color: #edc6b1;
+            border: 2px solid #92613e;
+            border-radius: 8px;
+            min-width: 160px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.25s ease, opacity 0.2s ease;
+        }
+
+        .nav-menu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 12px 16px;
+            font-family: "Gill Sans", sans-serif;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-bottom: 1px solid #d9ac91;
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            background-color: #d9ac91;
+        }
+
+        .nav-menu a.active {
+            background-color: #d9ac91;
+            color: #a9835f;
+            pointer-events: none;
+        }
+
+        /* Social icons */
+        .icon-links {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .icon-links a {
+            display: inline-flex;
+        }
+
+        .icon-links svg {
+            width: 36px;
+            height: 36px;
+            fill: #92613e;
+            transition: fill 0.2s ease;
+        }
+
+        .icon-links a:hover svg {
+            fill: #6b4a2f;
+        }
+
+        .icon-links a:hover svg circle {
+            fill: #6b4a2f;
+        }
+
     </style>
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">&#9776;</button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html" class="active">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="hype.html" target="_blank" rel="noopener">Hype</a>
+        </div>
+    </nav>
+
     <div class="content">
 
             <h1>Hi, I'm Brittany 👋🏾</h1>
 <section>
             <h2>
-                <a href="https://www.gov.ca.gov/2021/05/27/governor-newsom-announces-appointments-5-27-21/" target="_blank">
+                <a href="https://www.gov.ca.gov/2021/05/27/governor-newsom-announces-appointments-5-27-21/" target="_blank" rel="noopener noreferrer">
                     Governor-appointed</a> Senior Analytics Engineer at the CA Office of Data & Innovation
             </h2>
         </section>
@@ -99,16 +191,51 @@
             </p>
 
         <section class="links">
-            <p>
-                <a href="portfolio.html">Portfolio</a>
-                <a href="hype.html" target="_blank">Hype</a>
-                <a href="https://www.linkedin.com/in/britt-allen" target="_blank">LinkedIn</a>
-                <a href="https://github.com/britt-allen" target="_blank">GitHub</a>
-                <a href="https://medium.com/@britt-allen" target="_blank">Medium</a>
-            </p>
+            <div class="icon-links">
+                <a href="https://github.com/britt-allen" target="_blank" rel="noopener" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.68.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+                </a>
+                <a class="icon-medium" href="https://medium.com/@britt-allen" target="_blank" rel="noopener" aria-label="Medium">
+                    <svg viewBox="0 0 1024 1024" aria-hidden="true">
+                        <circle cx="512" cy="512" r="512" fill="#92613e" />
+                        <g transform="translate(-3.1,71.37) scale(0.85)" fill="#edc6b1">
+                            <path d="M1024 704.736V797.736C1018.16 798.3 1012.16 798.588 1006 798.588C896.061 798.588 834.166 707.016 831.497 592.432C831.418 588.002 831.448 583.6 831.546 579.228C831.606 576.501 831.714 573.783 831.852 571.075C831.921 569.628 831.989 568.269 832.098 566.753C832.206 565.236 832.315 563.72 832.443 562.204C836.401 511.613 852.687 466.594 879.568 433.284C896.267 412.606 916.334 396.852 939.09 386.316C959.078 376.253 987.17 370.699 1010.07 370.699H1011.06C1015.4 370.699 1019.71 370.844 1024 371.13V396.717C1019.45 395.47 1014.58 394.801 1009.4 394.715C963.086 395.67 935.486 451.145 932.049 528.007H1024V549.669H929.972L929.942 549.689C925.703 624.579 966.692 687.87 1024 704.736Z" />
+                            <path d="M836.115 244.625L836.923 244.448V238.195H672.014L518.891 598.084L365.768 238.195H188.059V244.448L188.857 244.625C218.957 251.419 234.239 261.551 234.239 298.091V725.872C234.239 762.412 218.898 772.544 188.798 779.338L188 779.516V785.788H308.57V779.535L307.773 779.358C277.672 772.564 262.39 762.432 262.39 725.892V322.905L459.093 785.788H470.249L672.683 309.996V736.457C670.104 765.317 654.96 774.228 627.705 780.382L626.897 780.569V786.773H836.923V780.569L836.115 780.382C808.831 774.228 793.322 765.317 790.743 736.457L790.605 298.091H790.743C790.743 261.551 806.024 251.419 836.115 244.625Z" />
+                        </g>
+                    </svg>
+                </a>
+                <a class="icon-linkedin" href="https://www.linkedin.com/in/britt-allen" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="12" fill="#92613e" />
+                        <g fill="#edc6b1" transform="translate(3.85,2.7) scale(0.0364)">
+                            <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
         </section>
 
     </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            hamburgerBtn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navMenu.contains(e.target) && e.target !== hamburgerBtn && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.innerHTML = '&#9776;';
+            }
+        });
+    </script>
 </body>
 
 </html>

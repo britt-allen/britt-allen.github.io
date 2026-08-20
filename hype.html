@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO + Social -->
+    <meta name="description" content="What others say about Brittany — a hype gallery.">
+    <meta property="og:title" content="Brittany's Website — Hype">
+    <meta property="og:description" content="What others say about Brittany — a hype gallery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://britt-allen.github.io/hype.html">
+    <meta property="og:image" content="https://britt-allen.github.io/files/social-preview.jpeg" />
+
     <title>Brittany's Website — Hype</title>
 
     <style>
@@ -40,8 +49,69 @@
             color: #6b4a2f;
         }
 
-        .back {
-            margin-bottom: 1.5rem;
+        /* Hamburger nav */
+        .navbar {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        .hamburger-btn {
+            background: none;
+            color: #92613e;
+            border: none;
+            width: 88px;
+            height: 88px;
+            font-size: 40px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .hamburger-btn:hover {
+            color: #6b4a2f;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 96px;
+            right: 0;
+            background-color: #edc6b1;
+            border: 2px solid #92613e;
+            border-radius: 8px;
+            min-width: 160px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.25s ease, opacity 0.2s ease;
+        }
+
+        .nav-menu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 12px 16px;
+            font-family: "Gill Sans", sans-serif;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-bottom: 1px solid #d9ac91;
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            background-color: #d9ac91;
+        }
+
+        .nav-menu a.active {
+            background-color: #d9ac91;
+            color: #a9835f;
+            pointer-events: none;
         }
 
         .gallery {
@@ -103,13 +173,19 @@
 </head>
 
 <body>
+
+    <nav class="navbar">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">&#9776;</button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="hype.html" class="active">Hype</a>
+        </div>
+    </nav>
+
     <div class="content">
 
-        <div class="back">
-            <a href="index.html">← Home</a>
-        </div>
-
-        <h1>What's all the hype about? 🌟</h1>
+        <h1>What others say 🌟</h1>
 
         <div class="gallery" id="gallery">
             <div class="item"><img src="files/2026-08-14-10-38-14.png" alt="" loading="lazy"></div>
@@ -142,6 +218,24 @@
     </div>
 
     <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            hamburgerBtn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navMenu.contains(e.target) && e.target !== hamburgerBtn && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.innerHTML = '&#9776;';
+            }
+        });
+
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 

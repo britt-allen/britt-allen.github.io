@@ -5,6 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO + Social -->
+    <meta name="description" content="Brittany Allen's portfolio — analytics engineering, data analysis, and technical writing.">
+    <meta property="og:title" content="Brittany Allen — Portfolio">
+    <meta property="og:description" content="Selected examples of Brittany Allen's work in analytics engineering, data analysis, and technical writing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://britt-allen.github.io/portfolio.html">
+    <meta property="og:image" content="https://britt-allen.github.io/files/social-preview.jpeg" />
+
     <title>Brittany Allen — Portfolio</title>
 
     <style>
@@ -50,9 +58,6 @@
             color: #6b4a2f;
         }
 
-        .back {
-            margin-bottom: 2rem;
-        }
         code {
             background-color: #f4f4f4;
             padding: 2px 4px;
@@ -74,15 +79,86 @@
             font-size: 14px; /* Scaled down to look better with the body text */
             color: #333;
         }
+
+        /* Hamburger nav */
+        .navbar {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1000;
+        }
+
+        .hamburger-btn {
+            background: none;
+            color: #92613e;
+            border: none;
+            width: 88px;
+            height: 88px;
+            font-size: 40px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .hamburger-btn:hover {
+            color: #6b4a2f;
+        }
+
+        .nav-menu {
+            position: absolute;
+            top: 96px;
+            right: 0;
+            background-color: #edc6b1;
+            border: 2px solid #92613e;
+            border-radius: 8px;
+            min-width: 160px;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0.25s ease, opacity 0.2s ease;
+        }
+
+        .nav-menu.open {
+            max-height: 300px;
+            opacity: 1;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 12px 16px;
+            font-family: "Gill Sans", sans-serif;
+            letter-spacing: 1px;
+            text-decoration: none;
+            border-bottom: 1px solid #d9ac91;
+        }
+
+        .nav-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .nav-menu a:hover {
+            background-color: #d9ac91;
+        }
+
+        .nav-menu a.active {
+            background-color: #d9ac91;
+            color: #a9835f;
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="content">
 
-        <div class="back">
-            <a href="index.html">← Home</a>
+    <nav class="navbar">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">&#9776;</button>
+        <div class="nav-menu" id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html" class="active">Portfolio</a>
+            <a href="hype.html" target="_blank" rel="noopener">Hype</a>
         </div>
+    </nav>
+
+    <div class="content">
 
         <h1>Portfolio</h1>
 
@@ -103,11 +179,11 @@
             optimization. I also built a validation model to filter for high-quality sensor data.
             </p>
             <p>
-            This work translates the "<a href="https://people.eecs.berkeley.edu/~varaiya/papers_ps.dir/BottleneckIdentification.pdf" target="_blank">Systematic Identification of Freeway Bottlenecks</a>" algorithm into production-ready SQL using dbt.
+            This work translates the "<a href="https://people.eecs.berkeley.edu/~varaiya/papers_ps.dir/BottleneckIdentification.pdf" target="_blank" rel="noopener noreferrer">Systematic Identification of Freeway Bottlenecks</a>" algorithm into production-ready SQL using dbt.
             </p>
             <p>
                 🔗
-                <a href="https://github.com/cagov/caldata-mdsa-caltrans-pems/commit/f117803b4d7d06e1669e687b9ca188e36e1f2938" target="_blank">
+                <a href="https://github.com/cagov/caldata-mdsa-caltrans-pems/commit/f117803b4d7d06e1669e687b9ca188e36e1f2938" target="_blank" rel="noopener noreferrer">
                 Bottleneck model
                 </a>
             </p>
@@ -120,7 +196,7 @@
             database layers, schemas, roles, and environments to support data governance and self-service analytics.
             </p>
             <p>
-                🔗 <a href="https://github.com/cagov/data-infrastructure/commit/f2f561a41d5a044e58fc993815ce6c23d7929519" target="_blank">Architecture diagram</a>
+                🔗 <a href="https://github.com/cagov/data-infrastructure/commit/f2f561a41d5a044e58fc993815ce6c23d7929519" target="_blank" rel="noopener noreferrer">Architecture diagram</a>
             </p>
         </div>
 
@@ -137,11 +213,11 @@
             data-driven, iterative approach to evaluating and improving the claimant experience.
             </p>
             <p>
-                🔗 <a href="https://www.govops.ca.gov/wp-content/uploads/sites/11/2020/09/Assessment.pdf" target="_blank">
+                🔗 <a href="https://www.govops.ca.gov/wp-content/uploads/sites/11/2020/09/Assessment.pdf" target="_blank" rel="noopener noreferrer">
                     Governor's report (citation p. 46-50)</a>
             </p>
             <p>
-                🔗 <a href="files/EDD-Help-Button-Event-Tracking-Analysis.pdf" target="_blank">
+                🔗 <a href="files/EDD-Help-Button-Event-Tracking-Analysis.pdf" target="_blank" rel="noopener">
                     Python data analysis</a>
             </p>
         </div>
@@ -156,13 +232,33 @@
             </p>
             <p>
                 🔗
-                <a href="https://medium.com/swlh/regular-expressions-in-python-and-pyspark-explained-code-included-53cbb22d4117" target="_blank">
+                <a href="https://medium.com/swlh/regular-expressions-in-python-and-pyspark-explained-code-included-53cbb22d4117" target="_blank" rel="noopener noreferrer">
                     Read the article
                 </a>
             </p>
         </div>
 
     </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.toggle('open');
+            hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            hamburgerBtn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!navMenu.contains(e.target) && e.target !== hamburgerBtn && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                hamburgerBtn.innerHTML = '&#9776;';
+            }
+        });
+    </script>
 </body>
 
 </html>
