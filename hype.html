@@ -7,15 +7,19 @@
     <title>Brittany's Website — Hype</title>
 
     <style>
+        body {
+            background-color: #edc6b1;
+        }
+
         h1 {
-            color: #000000;
+            color: #92613e;
             font-family: "Gill Sans", sans-serif;
             font-size: 38px;
             letter-spacing: 1px;
         }
 
         p {
-            color: #1b1b1b;
+            color: #92613e;
             font-family: "Gill Sans", sans-serif;
             font-size: 20px;
             letter-spacing: 1px;
@@ -28,48 +32,72 @@
         }
 
         a {
-            color: #1b1b1b;
+            color: #92613e;
             text-decoration: underline;
         }
 
         a:hover {
-            color: rgb(14, 173, 205);
+            color: #6b4a2f;
         }
 
         .back {
             margin-bottom: 1.5rem;
         }
 
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0 4px;
+        .gallery {
+            column-count: 3;
+            column-gap: 16px;
+            margin-top: 1rem;
         }
 
-        .column {
-            flex: 33%;
-            max-width: 33%;
-            padding: 0 2px;
+        .item {
+            margin-bottom: 16px;
+            break-inside: avoid;
         }
 
-        .column img {
-            margin-top: 8px;
-            vertical-align: middle;
+        .item img {
             width: 100%;
+            display: block;
+            border-radius: 4px;
+            cursor: zoom-in;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: opacity 0.15s ease;
         }
 
-        @media screen and (max-width: 800px) {
-            .column {
-                flex: 50%;
-                max-width: 50%;
-            }
+        .item img:hover {
+            opacity: 0.9;
         }
 
-        @media screen and (max-width: 600px) {
-            .column {
-                flex: 100%;
-                max-width: 100%;
-            }
+        @media (max-width: 1024px) {
+            .gallery { column-count: 2; column-gap: 20px; }
+        }
+
+        @media (max-width: 640px) {
+            .gallery { column-count: 1; column-gap: 0; }
+            h1 { font-size: 32px; }
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            padding: 2rem;
+        }
+
+        .lightbox.open {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 6px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
@@ -83,51 +111,52 @@
 
         <h1>What's all the hype about? 🌟</h1>
 
-        <div class="row">
-            <div class="column">
-                <img src="files/1656621811006.jpeg">
-                <img src="files/1618509220281.jpeg">
-                <img src="files/1574173398837.jpeg">
-                <img src="files/1574173398692.jpeg">
-                <img src="files/10-55-17-PM.png">
-                <img src="files/10-54-54-PM.png">
-                <img src="files/10-54-32-PM.png">
-                <img src="files/9-21-34-PM.png">
-            </div>
-            <div class="column">
-                <img src="files/10-54-09-PM.png">
-                <img src="files/10-53-50-PM.png">
-                <img src="files/10-53-28-PM.png">
-                <img src="files/10-53-02-PM.png">
-                <img src="files/10-52-42-PM.png">
-                <img src="files/10-52-16-PM.png">
-                <img src="files/9-20-06-PM.png">
-                <img src="files/2-07-39-PM.png">
-                <img src="files/9-21-07-PM.png">
-                <img src="files/9-19-40-PM.png">
-                <img src="files/9-18-31-PM.png">
-                <img src="files/9-20-38-PM.png">
-                <img src="files/9-21-51-PM.png">
-                <img src="files/9-19-51-PM.png">
-                <img src="files/9-21-42-PM.png">
-                <img src="files/9-19-17-PM.png">
-            </div>
-            <div class="column">
-                <img src="files/10-51-55-PM.png">
-                <img src="files/10-51-41-PM.png">
-                <img src="files/10-51-10-PM.png">
-                <img src="files/10-50-26-PM.png">
-                <img src="files/10-49-03-PM.png">
-                <img src="files/9-20-52-PM.png">
-                <img src="files/9-20-28-PM.png">
-                <img src="files/9-20-15-PM.png">
-                <img src="files/9-19-28-PM.png">
-                <img src="files/9-21-24-PM.png">
-                <img src="files/9-21-16-PM.png">
-            </div>
-        </div>
+        <div class="gallery" id="gallery">
+            <div class="item"><img src="files/2026-08-14-10-38-14.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/1656621811006.jpeg" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/1618509220281.jpeg" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/1574173398837.jpeg" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/2026-08-14-10-41-27.jpg" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/1574173398692.jpeg" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-55-17-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-54-54-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-54-32-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-54-09-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-53-50-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-53-28-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-53-02-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-52-42-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-52-16-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/2-07-39-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-51-55-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-51-41-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-51-10-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-50-26-PM.png" alt="" loading="lazy"></div>
+            <div class="item"><img src="files/10-49-03-PM.png" alt="" loading="lazy"></div>
+    </div>
 
     </div>
+
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.getElementById('gallery').addEventListener('click', (e) => {
+            if (e.target.tagName === 'IMG') {
+                lightboxImg.src = e.target.src;
+                lightbox.classList.add('open');
+            }
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('open');
+            lightboxImg.src = '';
+        });
+    </script>
 </body>
 
 </html>
